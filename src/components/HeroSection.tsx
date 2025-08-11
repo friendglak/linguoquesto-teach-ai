@@ -4,10 +4,17 @@ import { FloatingShapes, TeacherCharacter, StudentCharacters, DeviceIllustration
 
 export const HeroSection = () => {
   return (
-    <section id="home" className="section-container relative">
+    <section 
+      id="home" 
+      className="section-container relative bg-cover bg-center bg-no-repeat min-h-screen flex items-center"
+      style={{ backgroundImage: "url('/lovable-uploads/cb886db2-1e37-4f0f-beb5-3ab16f72ff70.png')" }}
+    >
+      {/* Dark overlay for better text readability */}
+      <div className="absolute inset-0 bg-black/20"></div>
+      
       <FloatingShapes />
       
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
         {/* Left Side - Content */}
         <div className="space-y-8 animate-fade-in-up relative z-10">
           <div className="space-y-4">
@@ -21,7 +28,7 @@ export const HeroSection = () => {
               Speech-Based Language Practice Made Fun! 🎯
             </h1>
             
-            <p className="text-lg text-muted-foreground leading-relaxed max-w-xl">
+            <p className="text-lg text-white leading-relaxed max-w-xl drop-shadow-lg">
               Help your students improve their speaking skills through interactive AI-powered conversations. 
               Create engaging activities that boost confidence and accelerate language learning progress. ✨
             </p>
@@ -42,16 +49,16 @@ export const HeroSection = () => {
           {/* Fun Stats with illustrations */}
           <div className="flex flex-wrap gap-8 pt-8">
             <div className="text-center relative">
-              <div className="text-2xl font-bold gradient-text">10,000+ 👩‍🏫</div>
-              <div className="text-sm text-muted-foreground">Happy Teachers</div>
+              <div className="text-2xl font-bold text-white drop-shadow-lg">10,000+ 👩‍🏫</div>
+              <div className="text-sm text-white/90 drop-shadow">Happy Teachers</div>
             </div>
             <div className="text-center relative">
-              <div className="text-2xl font-bold gradient-text">500K+ 🗣️</div>
-              <div className="text-sm text-muted-foreground">Conversations</div>
+              <div className="text-2xl font-bold text-white drop-shadow-lg">500K+ 🗣️</div>
+              <div className="text-sm text-white/90 drop-shadow">Conversations</div>
             </div>
             <div className="text-center relative">
-              <div className="text-2xl font-bold gradient-text">95% 💝</div>
-              <div className="text-sm text-muted-foreground">Love Rate</div>
+              <div className="text-2xl font-bold text-white drop-shadow-lg">95% 💝</div>
+              <div className="text-sm text-white/90 drop-shadow">Love Rate</div>
             </div>
           </div>
         </div>
@@ -65,7 +72,7 @@ export const HeroSection = () => {
             </div>
             
             {/* Teacher and students scene */}
-            <div className="bg-gradient-to-br from-purple-100/20 to-pink-100/20 rounded-3xl p-8 border border-purple-200/30">
+            <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20">
               <div className="flex justify-between items-end">
                 <TeacherCharacter />
                 <StudentCharacters />
@@ -74,7 +81,7 @@ export const HeroSection = () => {
           </div>
 
           {/* Background decorative elements */}
-          <div className="absolute inset-0 bg-gradient-to-r from-primary-bright/10 to-orange-400/10 rounded-3xl blur-3xl -z-10 animate-pulse-slow"></div>
+          <div className="absolute inset-0 bg-white/5 rounded-3xl blur-3xl -z-10 animate-pulse-slow"></div>
           
           {/* Additional floating elements */}
           <div className="absolute top-8 right-8 w-8 h-8 bg-yellow-400 rounded-full animate-bounce opacity-80"></div>
