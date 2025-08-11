@@ -1,6 +1,5 @@
-
 import { ArrowRight, Play } from "lucide-react";
-import { FloatingShapes, TeacherCharacter, StudentCharacters, DeviceIllustration } from "./IllustrationElements";
+import { FloatingShapes, HeroIllustration } from "./IllustrationElements";
 
 export const HeroSection = () => {
   return (
@@ -63,29 +62,9 @@ export const HeroSection = () => {
           </div>
         </div>
 
-        {/* Right Side - Colorful Illustrations */}
+        {/* Right Side - Enhanced Hero Illustration */}
         <div className="relative animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
-          <div className="relative z-10 space-y-8">
-            {/* Main device illustration */}
-            <div className="flex justify-center">
-              <DeviceIllustration />
-            </div>
-            
-            {/* Teacher and students scene */}
-            <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20">
-              <div className="flex justify-between items-end">
-                <TeacherCharacter />
-                <StudentCharacters />
-              </div>
-            </div>
-          </div>
-
-          {/* Background decorative elements */}
-          <div className="absolute inset-0 bg-white/5 rounded-3xl blur-3xl -z-10 animate-pulse-slow"></div>
-          
-          {/* Additional floating elements */}
-          <div className="absolute top-8 right-8 w-8 h-8 bg-yellow-400 rounded-full animate-bounce opacity-80"></div>
-          <div className="absolute bottom-8 left-8 w-6 h-6 bg-orange-400 rounded-full animate-pulse opacity-60"></div>
+          <HeroIllustration />
         </div>
       </div>
     </section>
